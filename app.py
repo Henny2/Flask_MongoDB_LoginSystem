@@ -8,7 +8,7 @@ app.secret_key = b'\xd0w \x82\x08\x19\xe3\x1c\x013\x01\xed=3\x8b\xcc'
 
 
 # Database configuration
-client = pymongo.MongoClient("mongodb+srv://Henny:Password1@cluster0-iykxr.mongodb.net/SANA?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://<username>:<password>@cluster0-iykxr.mongodb.net/SANA?retryWrites=true&w=majority")
 db = client.SANA
 
 
