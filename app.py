@@ -6,9 +6,20 @@ app = Flask(__name__)
 # whenever you create a session in Flask, you need a secret key for the app
 app.secret_key = b'\xd0w \x82\x08\x19\xe3\x1c\x013\x01\xed=3\x8b\xcc'
 
+## getting the nv variables
+import dotenv
+import os 
+import sys
+
+### loading the env variables
+dotenv.load_dotenv()
+
+
+db_username = os.getenv("DB_USERNAME")
+db_password = os.getenv("DB_PASSWORD")
 
 # Database configuration
-client = pymongo.MongoClient("mongodb+srv://<username>:<password>@cluster0-iykxr.mongodb.net/SANA?retryWrites=true&w=majority")
+client = pymongo.MongoClient(f"mongodb+srv://{db_username}:{db_password}@cluster0-iykxr.mongodb.net/SANA?retryWrites=true&w=majority")
 db = client.SANA
 
 

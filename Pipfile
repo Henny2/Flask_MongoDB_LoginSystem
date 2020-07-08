@@ -8,6 +8,10 @@ verify_ssl = true
 [packages]
 flask = "*"
 gunicorn = "*"
+python-dotenv = "*"
+pymongo = "*"
+dnspython = "*"
+passlib = "*"
 
 [requires]
 python_version = "3.7"
